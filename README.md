@@ -1,21 +1,78 @@
-## Overview
+# 🚀 Infrastructure Automation & Validation: Terraform + EC2 + Python
 
-This project focused on automating EC2 infrastructure on AWS and validating its operational state. I used Terraform to provision EC2 instances and the required networking components, then wrote Python scripts with boto3 to inspect instance status and health. The goal was to automate both deployment and verification, reducing manual checks and making infrastructure state easy to confirm.
+![Infrastructure: Terraform](https://img.shields.io/badge/Infrastructure-Terraform-%235835CC?style=for-the-badge&logo=terraform&logoColor=white)
+![Cloud: AWS](https://img.shields.io/badge/Cloud-AWS-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Compute: EC2](https://img.shields.io/badge/Compute-EC2-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Automation: Python](https://img.shields.io/badge/Automation-Python-%233776AB?style=for-the-badge&logo=python&logoColor=white)
+![SDK: boto3](https://img.shields.io/badge/SDK-boto3-green?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-## Stack and Environment
+A hands-on project that automates AWS EC2 infrastructure provisioning with Terraform and validates runtime state using Python and boto3.
 
-- Terraform was used to define and deploy EC2 resources as code. 
-- Python with the boto3 SDK was used to query AWS APIs and inspect instance metadata, state, and health. 
-- AWS EC2 served as the compute layer being provisioned and monitored.
+---
 
-## What I Learned
+## 📌 Overview
 
-I gained hands-on experience using Terraform to manage AWS infrastructure in a repeatable and structured way. On the automation side, I learned how to use boto3 to retrieve EC2 instance details and interpret state and health information programmatically. This helped bridge infrastructure provisioning with runtime validation.
+This project demonstrates an end-to-end workflow combining infrastructure deployment and validation:
 
-## Problems I Solved
+- Provisioned EC2 instances and networking using Terraform  
+- Automated infrastructure checks using Python (boto3)  
+- Retrieved instance state, metadata, and health programmatically  
+- Reduced reliance on manual verification of cloud resources  
 
-One challenge was managing dependencies between AWS resources in Terraform, which I addressed through modular design and clear references. Another was aligning deployed infrastructure with real-time operational data, which I solved by combining Terraform workflows with boto3-based status checks.
+---
 
-## Takeaway
+## ⚙️ Workflow
 
-This project reinforced how infrastructure automation and monitoring work together in real environments. Automating provisioning is only part of the job—being able to programmatically verify that systems are healthy and running as expected is just as important for reliable cloud operations.
+### 1. Infrastructure Provisioning
+- Defined EC2 instances and networking in Terraform  
+- Applied infrastructure using repeatable IaC workflows  
+
+### 2. AWS Integration
+- Connected to AWS services using boto3 SDK  
+- Queried EC2 APIs for instance data  
+
+### 3. Validation & Inspection
+- Retrieved instance state (running, stopped, etc.)  
+- Checked health and status programmatically  
+- Validated deployed infrastructure in real time  
+
+---
+
+## 🧰 Tech Stack
+
+- Terraform (Infrastructure as Code)  
+- AWS EC2 (Compute)  
+- Python (Automation)  
+- boto3 (AWS SDK)  
+
+---
+
+## ⚠️ Challenges & Fixes
+
+- **Terraform resource dependencies** → Structured modules and explicit references  
+- **Mismatch between deployed vs actual state** → Introduced boto3 validation layer  
+- **Manual verification overhead** → Automated health and status checks  
+
+---
+
+## 💡 Key Learnings
+
+- Infrastructure provisioning must be paired with validation  
+- Terraform enables repeatable, structured infrastructure deployment  
+- boto3 allows deep visibility into AWS resource state  
+- Automation reduces operational risk and manual effort  
+
+---
+
+## ✅ Outcome
+
+- ✔ EC2 infrastructure provisioned via Terraform  
+- ✔ Automated validation of instance state and health  
+- ✔ Programmatic inspection of AWS resources  
+- ✔ Reduced need for manual infrastructure checks  
+
+---
+
+## 🧪 Takeaway
+
+This project highlights the importance of combining infrastructure automation with runtime validation. Provisioning resources is only part of the process—ensuring they are healthy and operating as expected is critical for reliable cloud systems.
